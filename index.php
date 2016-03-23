@@ -25,7 +25,7 @@
             var myOptions = {
                   zoom: 9,
                   mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
+             }
             //Load the Map into the map div
             var map = new google.maps.Map(document.getElementById("map"), myOptions);
             map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -42,8 +42,7 @@
             stringArray = encodedString.split("****");
  
             var x;
-            for (x = 0; x < stringArray.length; x = x + 1)
-            {
+            for (x = 0; x < stringArray.length; x = x + 1){
                 var addressDetails = [];
                 var marker;
                 //Separate each field
