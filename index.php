@@ -74,11 +74,11 @@
  
             //Manages the info windows
             function closeInfos(){
-           if(infos.length > 0){
-              infos[0].set("marker",null);
-              infos[0].close();
-              infos.length = 0;
-           }
+               if(infos.length > 0){
+                  infos[0].set("marker",null);
+                  infos[0].close();
+                  infos.length = 0;
+               }
             }
  
     });
@@ -116,6 +116,7 @@
                  $separator = "****";
             }
             //Saving to the String, each variable is separated by three &'s
+            //this is for the shows the details in the map
             $encodedString = $encodedString.$separator.
             "<p class='content'><b>Lat:</b> ".$row[1].
             "<br><b>Long:</b> ".$row[2].
