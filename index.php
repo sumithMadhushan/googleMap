@@ -8,7 +8,7 @@
  
         #map { width:100%; height: 100%; z-index: 0; }
     </style>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaFo7ZM_HtzIrWd-sNO0mcdWA8XCCvB70" /></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY" /></script>
 
     <script type='text/javascript'>
  
