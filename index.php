@@ -1,6 +1,7 @@
 <html>
     <head>
     <script type='text/javascript' src='js/jquery-1.6.2.min.js'></script>
+
     <script type='text/javascript' src='js/jquery-ui.min.js'></script>
     <style>
  
@@ -22,10 +23,12 @@
             var infos = [];
  
             geocoder = new google.maps.Geocoder();
+
             var myOptions = {
                   zoom: 9,
                   mapTypeId: google.maps.MapTypeId.ROADMAP
              }
+
             //Load the Map into the map div
             var map = new google.maps.Map(document.getElementById("map"), myOptions);
             map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -40,6 +43,7 @@
             encodedString = document.getElementById("encodedString").value;
             //Split the encoded string into an array the separates each location
             stringArray = encodedString.split("****");
+
  
             var x;
             for (x = 0; x < stringArray.length; x = x + 1){
@@ -56,7 +60,9 @@
                     //Content is what will show up in the info window
                     content: addressDetails[0]
                 });
+
                 //Pushing the markers into an array so that it's easier to manage them
+                //
                 markersArray.push(marker);
                 google.maps.event.addListener( marker, 'click', function () {
                     closeInfos();
@@ -65,7 +71,8 @@
                     info.open(map,this);
                     infos[0]=info;
                 });
-               //Extends the boundaries of the map to include this new location
+
+               //Extends the boundaries of the map to include this new location///
                bounds.extend(lat);
             }
             //Takes all the lat, longs in the bounds variable and autosizes the map
